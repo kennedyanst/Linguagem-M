@@ -1,0 +1,21 @@
+let
+    Pasta = 
+        File.Contents("C:\Users\kenne\OneDrive\Documentos\Curso Power BI - Dados Criativos\Modulo_04\EX9\Dimensões.xlsx"),
+
+    Abrir = 
+        Excel.Workbook(Pasta),
+
+    tClientes = 
+        Abrir{[Kind="Table", Item = "Clientes"]}[Data],
+    
+    tCidades = 
+        Abrir{[Kind="Table", Item = "Cidades"]}[Data],
+
+    Mesclar = 
+        Table.Join(
+            tClientes, "Id Cidade", tCidades, "Id Cidade"
+        )
+
+
+in
+    Mesclar
