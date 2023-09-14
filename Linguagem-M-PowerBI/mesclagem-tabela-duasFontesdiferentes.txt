@@ -1,0 +1,30 @@
+let
+    Fonte_txt = Csv.Document(File.Contents("C:\Users\kenne\OneDrive\Documentos\Curso Power BI - Dados Criativos\Modulo_04\EX10\dCidades.txt"),[Delimiter=";", Columns=4, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+    
+    Tabela_cidades = Table.PromoteHeaders(Fonte_txt, [PromoteAllScalars=true]),
+
+    Fonte_excel = Excel.Workbook(File.Contents("C:\Users\kenne\OneDrive\Documentos\Curso Power BI - Dados Criativos\Modulo_04\EX10\dClientes.xlsx"), null, true),
+
+    Tabela_clientes = 
+        Table.TransformColumnTypes
+            (Fonte_excel
+                {[Item="Clientes",Kind="Table"]}[Data],
+                {
+                    {"Id Cliente", type text},
+                    {"Cliente", type text}, 
+                    {"Id Cidade", type text}
+                }
+            ),
+    
+    Mesclar_tabela = 
+        Table.RemoveColumns(
+            Table.Join(
+                Tabela_clientes, "Id Cidade",
+                Tabela_cidades, "Id Cidade" 
+            ),
+            {"Id Cidade"}
+        )
+
+    // #"Colunas Removidas" = Table.RemoveColumns(Mesclar_tabela,{"Id Cidade"})
+in
+    Mesclar_tabela
