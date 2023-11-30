@@ -1,0 +1,55 @@
+Funções Agregadoras:
+
+SUM (Soma): Calcula a soma dos valores em uma coluna ou expressão.
+AVERAGE (Média): Calcula a média dos valores em uma coluna ou expressão.
+MIN (Mínimo): Retorna o valor mínimo em uma coluna ou expressão.
+MAX (Máximo): Retorna o valor máximo em uma coluna ou expressão.
+COUNTROWS (Contar Linhas): Conta o número de linhas em uma tabela ou tabela filtrada.
+
+
+Funções Lógicas:
+
+IF (Se): Retorna um valor se uma condição for verdadeira e outro valor se for falsa.
+SWITCH (Alternar): Avalia várias expressões e retorna um resultado com base na primeira expressão verdadeira.
+TRUE (Verdadeiro): Retorna o valor Verdadeiro (True).
+NOT (Não): Inverte o valor de uma expressão lógica.
+AND (E): Retorna Verdadeiro se todas as expressões lógicas forem verdadeiras.
+OR (Ou): Retorna Verdadeiro se pelo menos uma das expressões lógicas for verdadeira.
+
+
+Funções de Filtro:
+
+CALCULATE (Calcular): Modifica o contexto de filtro das funções em uma expressão.
+FILTER (Filtrar): Retorna uma tabela filtrada com base em uma condição.
+ALL (Todas): Remove todos os filtros de uma tabela ou coluna.
+ALLSELECTED (Todas Selecionadas): Remove todos os filtros, exceto os filtros explicitamente aplicados.
+SELECTEDVALUE (Valor Selecionado): Retorna o valor de uma coluna, se houver apenas uma linha selecionada.
+
+
+Funções de Intervalo Temporal:
+
+SAMEPERIODLASTYEAR (Mesmo Período no Ano Passado): Retorna o mesmo período no ano anterior.
+DATEADD (Adicionar Data): Adiciona um número específico de unidades de tempo a uma data.
+DATESYTD (Ano até a Data): Retorna um período do início do ano até a data especificada.
+DATESQTD (Trimestre até a Data): Retorna um período do início do trimestre até a data especificada.
+PREVIOUSYEAR (Ano Anterior): Retorna o ano anterior ao período especificado.
+PREVIOUSMONTH (Mês Anterior): Retorna o mês anterior ao período especificado.
+DATESBETWEEN (Datas Entre): Retorna um intervalo de datas entre duas datas especificadas.
+DATESINPERIOD (Datas no Período): Retorna todas as datas dentro de um período específico.
+
+
+Funções de Tabela:
+
+VALUES (Valores): Retorna os valores únicos em uma coluna ou tabela.
+ADDCOLUMNS (Adicionar Colunas): Adiciona colunas calculadas a uma tabela.
+INTERSECT (Interseção): Retorna a interseção de duas tabelas.
+SUMMARIZE (Resumir): Cria uma nova tabela resumida com base em colunas existentes.
+UNION (União): Combina duas ou mais tabelas em uma única tabela.
+
+
+Funções Iteradoras:
+
+SUMX (SomaX): Itera por uma tabela e calcula a soma de uma expressão para cada linha.
+AVERAGEX (MédiaX): Itera por uma tabela e calcula a média de uma expressão para cada linha.
+MAXX (MáximoX): Itera por uma tabela e encontra o valor máximo de uma expressão para cada linha.
+MINX (MínimoX): Itera por uma tabela e encontra o valor mínimo de uma expressão para cada linha.
